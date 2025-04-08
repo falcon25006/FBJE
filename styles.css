@@ -62,6 +62,7 @@ a:hover {
   white-space: normal;      /* Permet le retour à la ligne */
   word-wrap: break-word;    /* Coupe les mots si trop longs */
   overflow-wrap: break-word;
+  
 }
 
 .container {
@@ -224,17 +225,51 @@ footer .d-flex {
 }
 
 .navbar {
-  height: 50px;
+  height: 65px; /* Increased height */
   width: 100%;
   padding-top: 0;
   padding-bottom: 0;
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin-bottom: 30px; /* Added spacing between navbar and FBJE image */
   background: none; /* Remove the background image */
   border-radius: 15px; /* Rounded corners */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Elegant shadow */
   color: rgb(58, 41, 213); /* Text color */
   border: 1px solid rgba(255, 255, 255, 0.914); /* Subtle border */
+  font-size: 1.6rem; /* Increased font size */
+}
+
+.navbar-toggler {
+  border: none; /* Remove default border */
+  background-color: #dc8100; /* Add background color for the burger menu */
+  padding: 8px 10px; /* Adjust padding for better appearance */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.navbar-toggler-icon {
+  background-image: none; /* Remove default icon */
+  width: 25px;
+  height: 3px;
+  background-color: white; /* White lines for the burger icon */
+  position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: '';
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+}
+
+.navbar-toggler-icon::before {
+  top: -8px;
+}
+
+.navbar-toggler-icon::after {
+  top: 8px;
 }
 
 .navbar .navbar-brand {
@@ -303,9 +338,8 @@ footer .d-flex {
 }
 
 .section-content img {
-  max-width: 100%; /* Ensure responsiveness */
-  width: 280px; /* Slightly reduced size for presentation images */
-  height: 400px; /* Maintain aspect ratio */
+  width: 175px; /* Further reduced width */
+  height: 250px; /* Further reduced height */
 }
 
 .partners-container {
@@ -392,9 +426,8 @@ footer .d-flex {
 }
 
 #lieux {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
+  display: block; /* Remove flex layout */
+  gap: 0; /* Remove gaps */
 }
 
 .lieu-item {
