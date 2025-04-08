@@ -1,0 +1,470 @@
+html, body {
+  height: 100%; /* Ensure the overlay covers the full page */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background: url('images/bg3.jpg') no-repeat center center fixed; /* Image de fond */
+  background-size: cover; /* Couvre tout l'écran */
+  color: #333;
+  padding: 50px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body::before {
+  content: '';
+  position: fixed; /* Ensure the overlay stays fixed across the page */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(228, 218, 218, 0.89); /* White overlay */
+  z-index: -1; /* Place derrière le contenu */
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 36px;
+  color: #dc8100;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+a {
+  color: #dc8100;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #333;
+}
+
+.container, p {
+  text-align: left;
+  max-width: 100%;
+  white-space: normal;      /* Permet le retour à la ligne */
+  word-wrap: break-word;    /* Coupe les mots si trop longs */
+  overflow-wrap: break-word;
+}
+
+.container {
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap; 
+  white-space: pre-line;/* Empêche le wrapping global par défaut */
+  align-items: center; /* Aligne verticalement l'image et le texte */
+}
+
+.container img {
+  display: block; /* Assure que l'image est bien alignée */
+  margin: 0; /* Supprime les marges inutiles */
+}
+
+.container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre verticalement le texte */
+  margin-top: -20px; /* Positionne le texte encore plus haut */
+}
+.container1 {
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap; 
+  
+  align-items: center; /* Aligne verticalement l'image et le texte */
+}
+.social-links {
+  margin-top: 20px;
+  margin-left: 0; /* Align buttons to the left */
+}
+
+social-links a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #dc8100;
+  color: white;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background-color: #333;
+}
+
+.social-links .fa-facebook {
+  color: #1877f2 !important; /* Solid blue for Facebook icon */
+  font-size: 4rem;
+}
+
+.social-links .fa-instagram {
+  color: #e4405f !important; /* Instagram pink */
+  font-size: 4rem;
+}
+
+social-links .fa-whatsapp {
+  color: #25d366 !important; /* Solid green for WhatsApp icon */
+  font-size: 4rem;
+}
+
+.footer {
+  margin-top: 20px;
+  font-style: italic;
+}
+
+footer {
+  display: flex;
+  flex-direction: column; /* Vertical layout */
+  align-items: flex-start; /* Align content to the left */
+  gap: 10px; /* Space between elements */
+  padding: 20px;
+  background-color: #000; /* Black background for the footer */
+}
+
+footer .child {
+  background-color: #000; /* Black background for each child */
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center; /* Align icons and text vertically */
+  gap: 10px; /* Space between icon and text */
+  color: #fff; /* White text color */
+  text-decoration: none; /* Remove underline from links */
+}
+
+footer .child a, footer .child span {
+  color: #fff; /* Ensure text in front of icons is white */
+}
+
+footer .child:hover {
+  background-color: #333; /* Dark gray on hover */
+}
+
+footer p {
+  background-color: #000; /* Black background for the copyright text */
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #fff; /* White text color */
+  margin: 0; /* Remove extra margin */
+}
+
+footer a {
+  display: flex;
+  align-items: center; /* Align icons and text vertically */
+  justify-content: space-between; /* Space between text and icon */
+  gap: 10px; /* Space between text and icon */
+  text-decoration: none; /* Remove underline from links */
+}
+
+footer a:hover {
+  color: #ffcc00; /* Yellow on hover */
+}
+
+footer i {
+  font-size: 2rem; /* Ensure consistent icon size */
+}
+
+footer span {
+  font-size: 1rem; /* Ensure consistent text size */
+  color: white; /* Text color */
+}
+
+footer .d-flex {
+  gap: 15px; /* Space between icons */
+  margin-bottom: 20px; /* Add spacing below the icons */
+}
+
+.bg-dark .d-flex {
+  gap: 20px; /* Space between social media icons */
+  margin-top: 20px; /* Add spacing above the icons */
+}
+
+.logo {
+  max-width: 50px;
+  margin-bottom: 20px;
+}
+
+.logo-placeholder {
+  width: 50px;
+  height: 50px;
+  background: #dc8100;
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid #333;
+}
+
+.carousel {
+  max-width: 1200px;
+  margin: 0 auto 50px; /* Added 50px margin below the carousel */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel img {
+  object-fit: cover;
+  height: 400px;
+}
+
+.navbar {
+  height: 50px;
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  background: none; /* Remove the background image */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Elegant shadow */
+  color: rgb(58, 41, 213); /* Text color */
+  border: 1px solid rgba(255, 255, 255, 0.914); /* Subtle border */
+}
+
+.navbar .navbar-brand {
+  color: rgb(49, 37, 212); /* Text color for brand */
+  font-weight: bold;
+}
+
+.navbar .navbar-brand:hover {
+  color: #ffcc00; /* Yellow on hover */
+}
+
+.navbar .nav-link {
+  color: rgb(205, 129, 53); /* Link color */
+}
+
+.navbar .nav-link:hover {
+  color: #ffcc00; /* Yellow on hover */
+}
+
+.btn-warning {
+  background: #004080; /* Button background */
+  border: none;
+  color: white; /* Button text color */
+  font-weight: bold;
+  transition: 0.3s;
+  width: 250px; /* Fixed width for uniform size */
+  height: 50px; /* Fixed height for uniform size */
+  text-align: center; /* Center text */
+  line-height: 50px; /* Align text vertically */
+}
+
+.btn-warning:hover {
+  background: #ffcc00; /* Hover background */
+  color: #004080; /* Hover text color */
+}
+
+.activities-container {
+  display: flex;
+  justify-content: flex-start; /* Align images to the left */
+  gap: 10px; /* Space between images */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.activities-container img {
+  max-width: 200px !important; /* Set a fixed width with !important to override other styles */
+  max-height: 200px !important; /* Set a fixed height with !important to override other styles */
+  object-fit: cover; /* Ensure the image fits within the specified dimensions */
+  border: 2px solid #5f00dc; /* Add a nice border */
+  border-radius: 8px; /* Slightly rounded corners */
+  padding: 5px; /* Add padding inside the border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.activities-container img:hover {
+  transform: scale(1.1); /* Enlarge the image slightly on hover */
+}
+
+.activities-list {
+  text-align: left; /* Align the list to the left */
+  margin-bottom: 20px; /* Add spacing below the list */
+}
+
+.section-content {
+  text-align: left; /* Align content to the left */
+}
+
+.section-content img {
+  max-width: 100%; /* Ensure responsiveness */
+  width: 280px; /* Slightly reduced size for presentation images */
+  height: 400px; /* Maintain aspect ratio */
+}
+
+.partners-container {
+  display: flex;
+  justify-content: center; /* Center the images */
+  gap: 20px; /* Space between images */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  margin-top: 20px;
+}
+
+.partners-container img {
+  width: 100px; /* Reduced width for square images */
+  height: 100px; /* Set height equal to width for square images */
+  border-radius: 8px; /* Slightly rounded corners */
+  border: 2px solid #2500dc; /* Add a border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.partners-container img:hover {
+  transform: scale(1.1); /* Enlarge the image slightly on hover */
+}
+
+.partner-text {
+  text-align: center; /* Center the text below the images */
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.club-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+}
+
+.club-text {
+  margin-top: 10px; /* Add spacing between the image and text */
+  text-align: center; /* Ensure the text is centered */
+  font-weight: bold; /* Optional: Make the text bold */
+  color: #333; /* Optional: Set text color */
+}
+
+#section4 img {
+  object-fit: cover;
+  border: 2px solid #0000dc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#section4 h3 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #004080;
+}
+
+#section4 .d-flex i {
+  font-size: 2rem;
+}
+
+#section4 .d-flex p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+#section6 ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+#section6 ul li {
+  margin-bottom: 10px;
+}
+
+#section6 ul li a {
+  color: #004080;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#section6 ul li a:hover {
+  color: #ffcc00;
+}
+
+#lieux {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.lieu-item {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+.lieu-item:hover {
+  background-color: #e9ecef;
+  border-color: #ccc;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .social-links a {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dynamic-paragraph {
+  opacity: 0;
+  animation: fadeIn 3s ease-in forwards; /* Animation en fondu pour le paragraphe */
+  animation-delay: 0.001s; /* Délai pour le paragraphe */
+}
+
+/* Animation for text */
+.text-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.text-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation for images */
+.image-animate {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.image-animate.visible {
+  opacity: 1;
+  transform: scale(1);
+}
