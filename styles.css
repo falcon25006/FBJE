@@ -289,6 +289,10 @@ footer .d-flex {
   color: #ffcc00; /* Yellow on hover */
 }
 
+.navbar .nav-link[href*="accueil"] {
+  display: none; /* Hide the "Accueil" tab */
+}
+
 .btn-warning {
   background: #004080; /* Button background */
   border: none;
@@ -460,6 +464,19 @@ footer .d-flex {
   .social-links a {
     padding: 8px 10px;
     font-size: 14px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.85); /* Dark background */
+    width: max-content; /* Adjust to content size */
+    padding: 0.5rem 1rem;
+    border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+  }
+
+  .navbar-nav .nav-link {
+    color: white; /* Ensure text remains readable */
   }
 }
 
