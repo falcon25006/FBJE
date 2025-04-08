@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FEDERATION BURKINABE DE JEUX D'ECHECS</title>
+    <!-- Add Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Add Font Awesome CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#top">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section1">Présentation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section2">Activités</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section3">Collaborateurs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section4">Clubs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacts">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Ajout de l'image et du texte regroupés -->
+    <div id="top" class="container mt-3 d-flex align-items-start">
+      <img
+        src="images/logofbje.png"
+        alt="Image Description"
+        class="me-3"
+        style="max-width: 300px"
+      />
+      <div>
+        <h1 id="dynamicText">
+          <!-- Retrait de la classe glow-text -->
+          <!-- Le texte sera ajouté ici par JavaScript -->
+        </h1>
+        <p class="dynamic-paragraph">
+          Notre site est en cours de construction pour vous offrir une meilleure
+          expérience !<br />
+          Bientôt, vous trouverez ici: des documents administratifs, le
+          calendrier <br />
+          des activités, et les classements ELO Nationaux.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // Texte à afficher progressivement pour le titre
+      const titleText = "FÉDÉRATION BURKINABÉ DE JEU D'ÉCHECS";
+
+      function typeText(elementId, text, delay) {
+        let index = 0;
+        const element = document.getElementById(elementId);
+        function type() {
+          if (index < text.length) {
+            element.innerHTML += text[index];
+            index++;
+            setTimeout(type, delay);
+          }
+        }
+        type();
+      }
+
+      // Appel de la fonction pour le titre
+      typeText("dynamicText", titleText, 50); // 50ms par caractère
+    </script>
+
+    <!-- Photo Carousel Section -->
+    <div id="photoCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/chess.jpg" class="d-block w-100" alt="Photo 1" />
+        </div>
+        <div class="carousel-item">
+          <img src="images/01.jpg" class="d-block w-100" alt="Photo 2" />
+        </div>
+        <div class="carousel-item">
+          <img src="images/f1.jpg" class="d-block w-100" alt="Photo 3" />
+        </div>
+        <div class="carousel-item">
+          <img src="images/02.jpg" class="d-block w-100" alt="Photo 4" />
+        </div>
+        <div class="carousel-item">
+          <img src="images/n2tournoi.jpg" class="d-block w-100" alt="Photo 5" />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#photoCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#photoCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Sections -->
+    <div id="section1" class="mb-5 section-content text-animate">
+      <h2>Présentation</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <p>
+            Découvrez l'histoire et les objectifs de la Fédération Burkinabé de
+            Jeu d'Échecs. <br />
+            La FBJE Fédération Burkinabè des Jeux d'Échecs est une organisation
+            nationale créée en 2024, née des efforts de la Ligue du Centre
+            d'Échecs fondée en 2023. Elle coordonne toutes les activités
+            d'échecs au Burkina Faso. Nicolas Carbonel est l'actuel président de
+            la FBJE. Sous sa direction, la fédération travaille au développement
+            des échecs dans tout le pays, organise des compétitions nationales
+            et soutient les initiatives des ligues régionales comme celle du
+            Centre présidée par M. KOÏTA Saïdou.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <img
+            src="images/01.jpg"
+            alt="Présentation"
+            class="img-fluid rounded image-animate"
+            style="max-width: 100%; width: 500px"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div id="section2" class="mb-5 section-content text-animate">
+      <h2>Activités</h2>
+      <ul class="activities-list">
+        <li>Un tournois national en équipe et en individuel chaque année</li>
+        <li>Des tournois mensuels et hebdomadaires</li>
+        <li>Des tournois en ligne sur lichess et chess.com</li>
+        <li>Des formations</li>
+        <li>etc.</li>
+      </ul>
+      <div class="activities-container">
+        <img
+          src="images/tn1.jpg"
+          alt="Tournois national 2025"
+          class="image-animate"
+        />
+        <img src="images/f2.jpg" alt="Ateliers" class="image-animate" />
+        <img src="images/f1.jpg" alt="Formations" class="image-animate" />
+        <img
+          src="images/n.jpg"
+          alt="Visite de Nigel SHORT au BURKINA FASO"
+          class="image-animate"
+        />
+      </div>
+    </div>
+
+    <div id="section3" class="mb-5 section-content text-animate">
+      <h2>Collaborateurs</h2>
+      <p>
+        Nos partenaires jouent un rôle clé dans le développement des échecs au
+        Burkina Faso. Découvrez certaines des organisations avec lesquelles nous
+        collaborons pour promouvoir les échecs .
+      </p>
+      <div class="partners-container">
+        <div>
+          <img
+            src="images/partenaire0.jpeg"
+            alt="Partenaire 1"
+            class="image-animate"
+          />
+          <p class="partner-text">MSJE</p>
+        </div>
+        <div>
+          <img
+            src="images/partenaire1.jpg"
+            alt="Partenaire 2"
+            class="image-animate"
+          />
+          <p class="partner-text">Ligue du Centre</p>
+        </div>
+        <div>
+          <img
+            src="images/partenaire2.png"
+            alt="Partenaire 3"
+            class="image-animate"
+          />
+          <p class="partner-text">Gif of chess</p>
+        </div>
+        <div>
+          <img
+            src="images/partenaire3.png"
+            alt="Partenaire 4"
+            class="image-animate"
+          />
+          <p class="partner-text">Chez Simon</p>
+        </div>
+        <div>
+          <img
+            src="images/partenaire4.jpg"
+            alt="Partenaire 5"
+            class="image-animate"
+          />
+          <p class="partner-text">Board Gamers</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="section4" class="mb-5 section-content text-animate">
+      <h2>Clubs</h2>
+      <div class="row">
+        <!-- Club 1 -->
+        <div class="col-md-4 text-center">
+          <div class="club-item">
+            <img
+              src="images/f1.jpg"
+              alt="Club Cheval Fou"
+              class="img-fluid rounded mb-3 image-animate"
+              style="max-width: 100%; height: 200px"
+            />
+            <p class="club-text">Club Cheval Fou</p>
+          </div>
+        </div>
+        <!-- Club 2 -->
+        <div class="col-md-4 text-center">
+          <div class="club-item">
+            <img
+              src="images/dafras.jpg"
+              alt="Club Dafras de Bobo"
+              class="img-fluid rounded mb-3 image-animate"
+              style="max-width: 100%; height: 200px"
+            />
+            <p class="club-text">Club Dafras de Bobo</p>
+          </div>
+        </div>
+        <!-- Club 3 -->
+        <div class="col-md-4 text-center">
+          <div class="club-item">
+            <img
+              src="images/epo1.jpg"
+              alt="Club Board Gamers"
+              class="img-fluid rounded mb-3 image-animate"
+              style="max-width: 100%; height: 200px"
+            />
+            <p class="club-text">Club Board Gamers</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="section6" class="mb-5 section-content text-animate">
+        <h2>Lieux</h2>
+        <ul>
+          <li>
+            <a href="https://maps.app.goo.gl/9C2CdHAS96rQrENa8" target="_blank">
+              Restaurant Chez Simon
+            </a>
+          </li>
+          <li>
+            <a href="https://maps.app.goo.gl/SeHFXwFs1JYcdKhQ9" target="_blank">
+              Club de dame ADC
+            </a>
+          </li>
+          <li>
+            <a href="https://maps.app.goo.gl/v8AMTwBe955vA9E8A" target="_blank">
+              Club de dame Rosenbourg
+            </a>
+          </li>
+        </ul>
+        <div id="lieux" class="d-flex justify-content-between">
+          <div class="lieu-item">
+            <a
+              href="https://maps.app.goo.gl/9C2CdHAS96rQrENa8"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              Restaurant Chez Simon
+            </a>
+          </div>
+          <div class="lieu-item">
+            <a
+              href="https://maps.app.goo.gl/SeHFXwFs1JYcdKhQ9"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              Club de dame ADC
+            </a>
+          </div>
+          <div class="lieu-item">
+            <a
+              href="https://maps.app.goo.gl/v8AMTwBe955vA9E8A"
+              target="_blank"
+              style="text-decoration: none; color: inherit"
+            >
+              Club de dame Rosenbourg
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="contacts" class="mt-4">
+        <h3>Contacts</h3>
+        <div class="d-flex flex-column align-items-start gap-3">
+          <!-- Facebook for Cheval Fou -->
+          <div class="d-flex align-items-center gap-2">
+            <i
+              class="fab fa-facebook"
+              style="font-size: 2rem; color: #1877f2"
+            ></i>
+            <a
+              href="https://web.facebook.com/groups/lechevalfou/"
+              target="_blank"
+              style="color: #1877f2; text-decoration: none"
+            >
+              Cheval Fou
+            </a>
+          </div>
+          <!-- Facebook for Dafras de Bobo -->
+          <div class="d-flex align-items-center gap-2">
+            <i
+              class="fab fa-facebook"
+              style="font-size: 2rem; color: #1877f2"
+            ></i>
+            <a
+              href="https://web.facebook.com/groups/122599391871039/"
+              target="_blank"
+              style="color: #1877f2; text-decoration: none"
+            >
+              Dafras de Bobo
+            </a>
+          </div>
+          <!-- Facebook for Ligue du Centre -->
+          <div class="d-flex align-items-center gap-2">
+            <i
+              class="fab fa-facebook"
+              style="font-size: 2rem; color: #1877f2"
+            ></i>
+            <a
+              href="https://www.facebook.com/profile.php?id=61573823982256&mibextid=ZbWKwL"
+              target="_blank"
+              style="color: #1877f2; text-decoration: none"
+            >
+              Ligue du Centre
+            </a>
+          </div>
+          <!-- WhatsApp for Board Gamers -->
+          <div class="d-flex align-items-center gap-2">
+            <i
+              class="fab fa-whatsapp"
+              style="font-size: 2rem; color: #25d366"
+            ></i>
+            <a
+              href="https://chat.whatsapp.com/BtWOWRjs1wXKvVcZLf8yCw"
+              target="_blank"
+              style="color: #25d366; text-decoration: none"
+            >
+              Groupe du Board Gamers
+            </a>
+          </div>
+          <!-- Instagram for Ligue du Centre -->
+          <div class="d-flex align-items-center gap-2">
+            <i
+              class="fab fa-instagram"
+              style="font-size: 2rem; color: #e4405f"
+            ></i>
+            <a
+              href="https://www.instagram.com/ligue_du_centre_d_echecs?utm_source=qr&igsh=bTNrc3UwenUyaXox"
+              target="_blank"
+              style="color: #e4405f; text-decoration: none"
+            >
+              Ligue du Centre
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="parent">
+      <div class="child">
+        <a href="https://web.facebook.com/FedBurJeudEchecs" target="_blank">
+          <i class="fab fa-facebook fa-2x"></i>
+          Page Facebook de la FBJE
+        </a>
+      </div>
+      <div class="child">
+        <a
+          href="https://www.instagram.com/burkina_chess_federation/"
+          target="_blank"
+        >
+          <i class="fab fa-instagram fa-2x"></i>
+          Page Instagram de la FBJE
+        </a>
+      </div>
+      <div class="child">
+        <a href="tel:61373761">
+          <i class="fas fa-phone fa-2x"></i>
+          61373761
+        </a>
+      </div>
+      <p>
+        © 2023 - 2025 Fédération Burkinabé de Jeu d'Échecs. Tous droits
+        réservés.
+      </p>
+    </footer>
+
+    <!-- Add Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Function to handle scroll-triggered animations
+      function handleScrollAnimations() {
+        const textElements = document.querySelectorAll(".text-animate");
+        const imageElements = document.querySelectorAll(".image-animate");
+
+        textElements.forEach((el) => {
+          if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+            el.classList.add("visible");
+          }
+        });
+
+        imageElements.forEach((el) => {
+          if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+            el.classList.add("visible");
+          }
+        });
+      }
+
+      // Trigger animations on scroll
+      window.addEventListener("scroll", handleScrollAnimations);
+
+      // Trigger animations on page load
+      document.addEventListener("DOMContentLoaded", handleScrollAnimations);
+    </script>
+  </body>
+</html>
